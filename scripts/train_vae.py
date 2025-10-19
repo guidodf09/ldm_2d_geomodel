@@ -92,21 +92,24 @@ hard_data_locations = np.array([[7,7], [7,31], [7,55], [55,7], [55,31], [55,55]]
 
 # Initiate variational autoendocder (VAE) model
 autoencoderkl = AutoencoderKL(
-                spatial_dims=2,
-                in_channels=1,
-                out_channels=1,
-                num_channels=(128, 128, 256, 512),
-                latent_channels=1,
-                num_res_blocks=1, 
-                                )
+    spatial_dims= 2,
+    in_channels= 1,
+    out_channels= 1,
+    num_channels=(64, 128, 256, 512),
+    latent_channels= 1,
+    num_res_blocks= 1,
+    norm_num_groups= 16,
+    attention_levels= (False, False, False, True)
+)   
+
 autoencoderkl = autoencoderkl.to(device)
 
 # Train the VAE on three loss terms: (1) reconstruction loss, (2) K-L divergence loss, (3) hard data facies loss
 
 # Training parameters
-n_epochs      = 10
-val_interval  = 5
-save_interval = 10
+n_epochs      = 1000
+val_interval  = 10
+save_interval = 100
 kl_weight     = 1e-6
 hd_weight     = 1e1
 
