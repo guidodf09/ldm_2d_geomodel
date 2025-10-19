@@ -103,13 +103,15 @@ trained_vae_dir = '../trained_vae/'
 trained_vae_weights = trained_vae_dir + '/vae_epoch_1.pt'
 
 autoencoderkl = AutoencoderKL(
-                spatial_dims=2,
-                in_channels=1,
-                out_channels=1,
-                num_channels=(128, 128, 256, 512),
-                latent_channels=1,
-                num_res_blocks=1, 
-                                )
+    spatial_dims= 2,
+    in_channels= 1,
+    out_channels= 1,
+    num_channels=(64, 128, 256, 512),
+    latent_channels= 1,
+    num_res_blocks= 1,
+    norm_num_groups= 16,
+    attention_levels= (False, False, False, True)
+    )
 autoencoderkl = autoencoderkl.to(device)
 checkpoint    = torch.load(trained_vae_weights)
 autoencoderkl.load_state_dict(checkpoint)
@@ -129,8 +131,8 @@ unet.to(device)
 
 
 # Set noise scheduler to use for forward (noising) process
-scheduler = DDPMScheduler(num_train_timesteps=1000, schedule="linear_beta", beta_start=0.0001, beta_end=0.02)
-#scheduler = DDIMScheduler(num_train_timesteps=100, schedule="linear_beta", beta_start=0.0001, beta_end=0.02)
+#scheduler = DDPMScheduler(num_train_timesteps=1000, schedule="linear_beta", beta_start=0.0001, beta_end=0.02)
+scheduler = DDIMScheduler(num_train_timesteps=100, schedule="scaled_linear_beta", beta_start=0.0015, beta_end=0.0195, clip_sample=True) #Set to False for inference
 
 # Compute scaling factor for non-perfectly Gaussian VAE latent spaces
 example_data = first(m_train_loader)
