@@ -76,7 +76,7 @@ m_test_loader  = DataLoader(m_test_ds,  batch_size=batch_size, shuffle=False)
 
 # Initiate variational autoendocder (VAE) model and load pre-trained weights
 trained_vae_dir = '../trained_vae/'
-trained_vae_weights = trained_vae_dir + '/vae_epoch_1.pt'
+trained_vae_weights = trained_vae_dir + '/vae_epoch_1000.pt'
 
 autoencoderkl = AutoencoderKL(
     spatial_dims= 2,
