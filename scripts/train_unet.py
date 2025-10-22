@@ -150,9 +150,9 @@ optimizer = torch.optim.Adam(unet.parameters(), lr=1e-4)
 
 
 # Training parameters
-n_epochs      = 10
-val_interval  = 5
-save_interval = 10
+n_epochs      = 1000
+val_interval  = 20
+save_interval = 100
 
 # Train the U-net on the noise predicting function
 
