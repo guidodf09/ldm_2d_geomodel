@@ -111,7 +111,7 @@ n_epochs      = 1000
 val_interval  = 10
 save_interval = 100
 kl_weight     = 1e-6
-hd_weight     = 1e1
+hd_weight     = 1e-2
 
 
 # Gradient parameters (optimizer and scaler)
