@@ -2,7 +2,7 @@
 File: train_vae.py
 Author: Guido Di Federico (code is based on the implementation available at https://github.com/Project-MONAI/tutorials/tree/main/generative and https://github.com/huggingface/diffusers/)
 Description: Script to train a variational autoencoder (VAE) to learn the mapping between geomodel space and low-dimensional latent space for latent diffusion models
-Note: requires Python package "monai" or "monai-generative" to load VAE model and dataloaders
+Note: differently from train_vae_old_data_prep.py, it does loads data automatically as a numpy array available at https://drive.google.com/drive/folders/1JCaaaJOvfReaqPbIBVtVnPAH7TVc4AA5?usp=sharing
 '''
 
 
@@ -24,7 +24,7 @@ from monai.utils import first, set_determinism
 from generative.networks.nets import AutoencoderKL, DiffusionModelUNet
 
 # Set directories
-data_path       = '../data/new_dataset_2d.npy'
+data_path       = '../data/m_petrel.npy'
 trained_vae_dir = '../trained_vae/'
 
 if not os.path.exists(trained_vae_dir):
