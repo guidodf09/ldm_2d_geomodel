@@ -169,7 +169,7 @@ for epoch in range(n_epochs):
         progress_bar.set_postfix({"loss": epoch_loss / (step + 1)})
     epoch_losses.append(epoch_loss / (step + 1))
     
-    if (epoch + 1) % 10 == 0:
+    if (epoch + 1) % save_interval == 0:
         torch.save(unet.state_dict(), f'{trained_unet_dir}' + f'/unet_epoch_{epoch + 1}.pt')
 
     if (epoch + 1) % val_interval == 0:
