@@ -131,8 +131,8 @@ unet.to(device)
 
 
 # Set noise scheduler to use for forward (noising) process
-#scheduler = DDPMScheduler(num_train_timesteps=1000, schedule="linear_beta", beta_start=0.0001, beta_end=0.02)
-scheduler = DDIMScheduler(num_train_timesteps=100, schedule="scaled_linear_beta", beta_start=0.0015, beta_end=0.0195, clip_sample=True) #Set to False for inference
+scheduler = DDPMScheduler(num_train_timesteps=1000, schedule="linear_beta", beta_start=0.0001, beta_end=0.02)
+#scheduler = DDIMScheduler(num_train_timesteps=100, schedule="scaled_linear_beta", beta_start=0.0015, beta_end=0.0195, clip_sample=True) #Set to False for inference
 
 # Compute scaling factor for non-perfectly Gaussian VAE latent spaces
 example_data = first(m_train_loader)
