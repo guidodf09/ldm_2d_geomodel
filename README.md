@@ -9,7 +9,7 @@ We present a deep-learning geological parameterization for complex facies-based 
 Our application involves conditional 2D three-facies (channel-levee-mud) systems. The LDM can provide realizations that are visually consistent with samples from geomodeling software. General agreement between the diffusion-generated models and reference realizations can be observed through quantitative metrics involving spatial and flow-response statistics. The smoothness of the parameterization method can be assessed through latent-space interpolation tests. The LDM can then be used for ensemble-based data assimilation. Significant uncertainty reduction, posterior P<sub>10</sub>-P<sub>90</sub> forecasts that generally bracket observed data, and consistent posterior geomodels, can be achieved.
 
 ## Contents
-- `scripts/` - Directory to store dataset for data preparation, variational autoencoder (VAE) training and U-net training `.py` scripts.
+- `scripts/` - Directory to store dataset for data preparation, variational autoencoder (VAE) training and U-net training `.py` scripts, as well as geomodel generation code.
 - `data/` - Directory to store training dataset used in this study (2D, three-facies channelized geomodels). Dataset is stored as datasets.Dataset folder (`diffusers_dataset/`). Alternatively, data is stored at the link [https://drive.google.com/drive/folders/1JCaaaJOvfReaqPbIBVtVnPAH7TVc4AA5?usp=sharing]
 - `testing/` - Directory to store reference (geomodeling software-generated) `m_petrel_200.npy` and LDM-generated `m_ldm_200.npy` ensembles used for flow simulations and history matching. Synthetic "true" models used in history matching are saved as `m_true_1.npy` and `m_true_2.npy`. Both are stored as `.npy` files.
 
