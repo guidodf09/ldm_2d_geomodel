@@ -46,7 +46,8 @@ thresh2 = 0.8
 
 # Initiate variational autoendocder (VAE) model and load pre-trained weights
 trained_vae_dir = '../trained_vae/'
-trained_vae_weights = trained_vae_dir + '/vae_epoch_1000.pt'
+trained_vae_epoch = 1000
+trained_vae_weights = trained_vae_dir + f'/vae_epoch_{trained_vae_epoch}.pt'
 
 autoencoderkl = AutoencoderKL(
     spatial_dims= 2,
@@ -65,8 +66,9 @@ autoencoderkl.eval()
 
 
 # Initiate U-net model and load pre-trained weights
-trained_unet_dir = '../trained_unte/'
-trained_unet_weights = trained_vae_dir + '/vae_epoch_1000.pt'
+trained_unet_dir = '../trained_unet/'
+trained_unet_epoch = 1000
+trained_unet_weights = trained_unet_dir + f'/unet_epoch_{trained_unet_epoch}.pt'
 
 
 unet = DiffusionModelUNet(
