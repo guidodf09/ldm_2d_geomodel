@@ -3,7 +3,7 @@
 Code example for "Latent diffusion models for parameterization and data assimilation of facies-based geomodels"[https://arxiv.org/abs/2406.14815] and "Latent diffusion models for parameterization of facies-based geomodels and their use in data assimilation" [https://doi.org/10.1016/j.cageo.2024.105755]
 
 <p align="center">
-  <img src="./pics/ddim_50steps_seed0_xt_tricat_titled.gif" width="19%"/>
+  <img src="./pics/ddim_50steps_seed1_xt_tricat_titled.gif" width="19%"/>
   <img src="./pics/ddim_50steps_seed3_xt_tricat_titled.gif" width="19%"/>
   <img src="./pics/ddim_50steps_seed4_xt_tricat_titled.gif" width="19%"/>
   <img src="./pics/ddim_50steps_seed5_xt_tricat_titled.gif" width="19%"/>
