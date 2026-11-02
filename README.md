@@ -15,6 +15,11 @@ Code example for "Latent diffusion models for parameterization and data assimila
   <img src="./pics/esmda_case0.gif" width="50%"/>
 </p>
 
+<p align="center">
+  <img src="./pics/hm_P2_OIL_esmda_case0.gif" width="32%"/>
+  <img src="./pics/hm_P2_WAT_esmda_case0.gif" width="32%"/>
+  <img src="./pics/hm_I1_WAT_esmda_case0.gif" width="32%"/>
+</p>
 
 
 ## Summary
