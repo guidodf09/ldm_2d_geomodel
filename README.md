@@ -16,7 +16,7 @@ We present a deep-learning geological parameterization for complex facies-based 
 </p>
 
 <p align="center">
-  <img src="./pics/real_samples.png" width="90%"/>
+  <img src="./pics/real_samples.png" width="100%"/>
 </p>
 
 Our application involves conditional 2D three-facies (channel-levee-mud) systems. The LDM can provide realizations that are visually consistent with samples from geomodeling software. General agreement between the diffusion-generated models and reference realizations can be observed through quantitative metrics involving spatial and flow-response statistics. The smoothness of the parameterization method can be assessed through latent-space interpolation tests. The LDM can then be used for ensemble-based data assimilation. Significant uncertainty reduction, posterior P<sub>10</sub>-P<sub>90</sub> forecasts that generally bracket observed data, and consistent posterior geomodels, can be achieved.
