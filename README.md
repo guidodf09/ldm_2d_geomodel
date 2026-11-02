@@ -5,8 +5,6 @@ Code example for "Latent diffusion models for parameterization and data assimila
 
 ## Summary
 We present a deep-learning geological parameterization for complex facies-based geomodels, using recently developed generative latent diffusion models (LDMs), first published by [Rombach et al. (2022)](https://arxiv.org/abs/2112.10752). Diffusion models are trained to ''denoise'', which enables them to generate new geological realizations from input fields characterized by random noise. Based on Denoising Probabilstic Diffusion Models (DDPMs), introduced by [Ho et al. (2020)](https://arxiv.org/abs/2006.11239), the LDM representation reduces the number of variables to be determined during history matching, while preserving realistic geological features in posterior models. The model developed in this work includes a variational autoencoder (VAE) for dimension reduction, a U-net for the denoising process, and a Denoising Diffusion Implicit Model (DDIM, [Song et al. (2021)](https://arxiv.org/abs/2010.02502)) noise scheduling for inference.
-\
-\
 
 <p align="center">
   <img src="./pics/ddim_seed1_xt_tricat_titled.gif" width="16%"/>
@@ -16,8 +14,7 @@ We present a deep-learning geological parameterization for complex facies-based 
   <img src="./pics/ddim_seed6_xt_tricat_titled.gif" width="16%"/>
   <img src="./pics/ddim_seed9_xt_tricat_titled.gif" width="16%"/>
 </p>
-\
-\
+
 Our application involves conditional 2D three-facies (channel-levee-mud) systems. The LDM can provide realizations that are visually consistent with samples from geomodeling software. General agreement between the diffusion-generated models and reference realizations can be observed through quantitative metrics involving spatial and flow-response statistics. The smoothness of the parameterization method can be assessed through latent-space interpolation tests. The LDM can then be used for ensemble-based data assimilation. Significant uncertainty reduction, posterior P<sub>10</sub>-P<sub>90</sub> forecasts that generally bracket observed data, and consistent posterior geomodels, can be achieved.
 
 
