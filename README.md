@@ -35,11 +35,18 @@ Our application involves conditional 2D three-facies (channel-levee-mud) systems
 </p>
 
 <p align="center">
+  <em>Figure 3: Synthetic truth and evolving ensemble mean during data assimilation.</em>
+</p>
+
+<p align="center">
   <img src="./pics/hm_P2_OIL_esmda_case0.gif" width="32%"/>
   <img src="./pics/hm_P2_WAT_esmda_case0.gif" width="32%"/>
   <img src="./pics/hm_I1_WAT_esmda_case0.gif" width="32%"/>
 </p>
 
+<p align="center">
+  <em>Figure 4: Evolving well response rates during latent-space data assimilation.</em>
+</p>
 
 ## Contents
 - `scripts/` – Scripts for data preparation (`prepare_dataset.py`), VAE training, U-net training and geomodel generation.
